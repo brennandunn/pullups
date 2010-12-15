@@ -6,8 +6,8 @@ class HomeController < ApplicationController
   end
 
   def lookup_for_coordinates
-    longitude = params[:location][:longitude]
-    latitude = params[:location][:latitude]
+    longitude = params[:longitude].to_f
+    latitude = params[:latitude].to_f
     render :json => PullupBar.near([latitude, longitude], 100)
   end
 

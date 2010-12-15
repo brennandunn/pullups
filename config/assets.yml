@@ -5,6 +5,9 @@ javascripts:
     - public/javascripts/jquery.js
     - public/javascripts/rails.js
     - public/javascripts/core.js
+    - public/javascripts/underscore.js
+    - public/javascripts/backbone.js
+    - public/javascripts/pullups/manager.js
 
 stylesheets:
   global:

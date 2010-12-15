@@ -2,6 +2,8 @@
 
 
 :javascript
+  var map;
+  var manager;
   $(function(){
     var latlng = new google.maps.LatLng(-34.397, 150.644);
     var myOptions = {
@@ -9,5 +11,6 @@
       center: latlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-    var map = new google.maps.Map($('#map').get(0), myOptions);
+    map = new google.maps.Map($('#map').get(0), myOptions);
+    manager = new Manager(map);
   });

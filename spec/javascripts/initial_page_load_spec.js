@@ -32,16 +32,4 @@ describe('What happens when a page loads', function(){
     expect(mostRecentAjaxRequest().url).toEqual('/lookup-for-coordinates?longitude=-1&latitude=1');
   })
   
-  it('plots results on a google map', function() {
-
-    $map = jasmine.createSpy();
-    $mockResults = [{name: 'Norfolk', latitude: -1.0, longitude: 1.0},{name: 'Virginia Beach', latitude: -1.0, longitude: 1.0},{name: 'Chesapeake', latitude: -1.0, longitude: 1.0}];
-
-    $instance = new Manager($map);
-    $instance.plotResults($mockResults);
-  
-    expect($map).toHaveBeenCalledWith($mockResults);
-    
-  })
-  
 })
